@@ -1,0 +1,325 @@
+@media screen and (max-width: 800px) {
+
+}
+
+/*HEADER AND FOOTER RECTANGLE*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+:root{
+    --background-color: #2D2A32;
+    --above-background-color: #38448B;
+    --medium-color: #9F9E9F;
+    --below-foreground: #A0655A;
+    --foreground-color: #E77254;
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+#rectangleHeader {
+    width: 100vw;
+    height: 40vh;
+    background-color: var(--above-background-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#triangle{
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-bottom: 20vh solid var(--above-background-color);
+    position: absolute;
+    top: 40vh;
+    left: 0;
+    rotate: 180deg;
+}
+
+#rectangleFooter {
+    width: 120vw;
+    height: 600px;
+    background-color: var(--above-background-color);
+    position: relative;
+    bottom: -50px;
+    left: -100px;
+    z-index: -1;
+}
+
+#headerImageAndText>img{
+    position: relative;
+    z-index: 2;
+    width: 600px;
+    height: 600px;
+    margin-left: min(10%, 15vw);
+    margin-top: 10vh;
+}
+
+#headerText{
+    position: relative;
+    z-index: 1;
+    width: 40vw;
+    height: 400px;
+    bottom: 550px;
+    left: calc(min(10%, 15vw) + 600px);
+    background-color: white;
+}
+
+#headerText>p{
+    font-size: 3rem;
+    margin-left: 60px;
+    inline-size: min-content;
+    width: 29vw;
+}
+
+#headerText>p:first-child{
+    padding-top: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#headerText>p:nth-child(2){
+    padding-top: 10px;
+    font-size: calc(0.5rem + 1.1vw);
+    height: 300px;
+}
+
+#name{
+    position: relative;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-left: calc(min(10%, 15vw) + 125px);
+    inline-size: min-content;
+    width: 30vw;
+    bottom: 550px;
+    z-index: 2;
+}
+
+#logoContainer{
+    z-index: 3;
+    margin-top: -625px;
+    position: absolute;
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    gap: 25px;
+    width: 39vw;
+    left: calc(min(10%, 15vw) + 600px);
+
+}
+
+#discord{
+    width: 50px;
+    height: 50px;
+}
+#github{
+    width: 50px;
+    height: 50px;
+}
+
+/*BODY*/
+
+.workShowcase{
+    position: relative;
+    margin: 0 auto;
+    background-color: rgb(128, 128, 128);
+    width: 400px;
+    height: 400px;
+}
+
+.previewWorkImage{
+    width: 100%;
+    height: 200px;
+}
+
+.githubWorkLogo{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin-left: -100px;
+    margin-top: 215px;
+}
+
+.linkWorkLogo{
+    width: 50px;
+    height: 50px;
+    margin-left: 340px;
+    position: absolute;
+    margin-top: 10px;
+}
+
+#workContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr 1fr 1fr;
+    grid-column-gap: 2vw;
+    grid-row-gap: 5vh;
+    height: max(80vh, 1000px);
+}
+
+#MyWorkText{
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 5vw;
+    margin-bottom: 20vh;
+}
+
+.moveBodyTop{
+    margin-top: -10vh;
+}
+
+.workShowcase>p:first-of-type{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.workShowcase>p:nth-of-type(2){
+    font-size: 1.5rem;
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+/*FOOTER*/
+
+#footerTextSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: -550px;
+    height: 400px;
+}
+
+.footerHeader{
+    font-size: 5rem;
+    font-weight: bold;
+    margin-left: 4.5vw;
+    color: white;
+    margin-top: 25px;
+}
+
+.footerText{
+    font-size: 2rem;
+    margin-left: 4.5vw;
+    color: white;
+    margin-bottom: 40px;
+}
+
+#pictureFooter{
+    width: 800px;
+    height: 500px;
+    margin-top: -550px;
+    margin-right: 5vw;
+}
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.icon{
+    width: 25px;
+    height: 25px;
+}
+
+#contactFooter>div{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 4.5vw;
+}
+
+/*TABLET*/
+
+@media screen and (max-width: 1350px) {
+
+    #name{
+        font-size: 3rem;
+        margin-left: max(510px, 55vw);
+        width: 350px;
+        bottom: 1150px;
+        z-index: 2;
+    }
+
+    #headerText{
+        margin-top: 200px;
+        margin-left: -500px;
+        width: 75vw;
+        height: 500px;
+    }
+
+    #aboutMePara{
+        padding-top: 10px;
+        padding-left: max(275px, 37.5vw);
+        width: 100px;
+        font-size: 3rem;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    #headerText>p:nth-child(2){
+        padding-top: 10px;
+        font-size: 1.5rem;
+        height: 700px;
+        width: 60vw;
+        padding-left: calc(20px + 258px);
+    }
+
+    #headerImageAndText>img{
+        height: 500px;
+        width: 400px;
+    }
+
+    #logoContainer{
+        margin-left: -550px;
+        width: 75vw;
+    }
+
+    #workContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto 1fr 1fr 1fr 1fr;
+        grid-column-gap: 2vw;
+        grid-row-gap: 5vh;
+        height: max(80vh, 1000px);
+    }
+
+    #rectangleFooter{
+        margin-top: 40vh;
+        height: 800px;
+    }
+
+    #footerTextSection{
+        margin-top: -750px;
+        height: 500px;
+    }
+
+    .footerHeader{
+        font-size: 4rem;
+        width: 350px;
+    }
+
+    #footerImage{
+        margin-right: 50px;
+        margin-top: -200px;
+    }
+
+    #footerImage>img{
+        width: 450px;
+    }
+
+}
